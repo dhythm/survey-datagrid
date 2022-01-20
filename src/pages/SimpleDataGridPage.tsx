@@ -25,7 +25,11 @@ export const SimpleDataGridPage: VFC<
 };
 
 const columns = [
-  { field: "id", headerName: "ID", width: 90 },
+  {
+    field: "id",
+    headerName: "ID",
+    width: 90,
+  },
   {
     field: "firstName",
     headerName: "First name",

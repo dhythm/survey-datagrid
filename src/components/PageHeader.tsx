@@ -25,6 +25,7 @@ export const PageHeader: VFC<Props> = ({ type, setType }) => {
         >
           <FormControlLabel value="simple" control={<Radio />} label="Simple" />
           <FormControlLabel value="filter" control={<Radio />} label="Filter" />
+          <FormControlLabel value="custom" control={<Radio />} label="Custom" />
         </RadioGroup>
       </FormControl>
     </Box>
