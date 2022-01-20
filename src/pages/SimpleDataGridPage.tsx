@@ -1,13 +1,15 @@
 import { DataGrid } from "@mui/x-data-grid";
-import { VFC } from "react";
+import { ComponentProps, VFC } from "react";
 import { Page } from "../components/Page";
 import { useUsers } from "../utils/hooks/useUsers";
 
-export const ListPage: VFC = () => {
+export const SimpleDataGridPage: VFC<
+  Omit<ComponentProps<typeof Page>, "children">
+> = ({ ...props }) => {
   const users = useUsers();
 
   return (
-    <Page>
+    <Page {...props}>
       <div style={{ height: 400, width: "100%" }}>
         <DataGrid
           rows={users.data}

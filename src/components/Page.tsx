@@ -1,9 +1,13 @@
 import { Box } from "@mui/material";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
-export const Page: FC = ({ children }) => {
+type Props = {
+  header?: ReactNode;
+};
+export const Page: FC<Props> = ({ header, children }) => {
   return (
     <Box height={"100vh"} bgcolor={"whitesmoke"}>
+      {header}
       <Box display={"flex"} flex={1} p={2}>
         {children}
       </Box>
